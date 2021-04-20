@@ -1,0 +1,105 @@
+body{
+font-family: 'Dela Gothic One', cursive;
+background-image: url(../img/background-full.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+margin:0;
+/*Esas etiquetas es para que se autoajuste al tamaño*/
+}
+
+header{
+	background-color: #384c5c; /*Colocando el color del header*/
+	width: 100%;
+	opacity: 90%; /*Es para colocarle opacidad al header, queda bonito porque se ve el fondoxd*/
+}
+
+header .menu-contenedor{
+	display: flex;
+	flex-direction: row; /*Para que salgan en fila*/
+	flex-wrap: wrap; /*Para que cuando disminuya la pantalla, uno vaya debajo del otro*/
+	justify-content: center; /*Centrar*/
+	margin-left: 32px; /*Para que se vayan separando*/
+	margin-right: 10px;
+}
+
+header .menu-contenedor a{
+	font-size: 16px;
+	line-height: 50px;
+	padding: 2px 8px; /*Para separar las opciones*/
+	color: white;
+	text-decoration: none; /*Quitar la linea de abajo cuando se selecciona*/
+}
+
+header .menu-contenedor img{
+	width: 67px;
+	height: 45px;
+	/*Acomodando las medidas que tiene por defecto*/
+}
+
+header a:hover{
+	color: orange;
+	text-decoration: none;
+	/*Es para que al pasar el cursor por encima de las opciones, se ponga de otro color*/
+}
+
+.contenedor{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.contenedor-form{
+	display: flex;
+	flex-direction: column; /*Porque son divisiones que van una debajo de otra*/
+	max-width: 100%;
+	width: 600px;
+	background: #ffffff;
+	opacity: 90%;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px; /*Para que los bordes no sean tan rectangulos*/
+	box-shadow: 3px 0px 10px -5px black; /*Dandole sombras a los bordes*/
+	padding: 10px 30px 10px 30px;
+} 
+
+button{
+	width: 200px;
+	margin-top: 20px;
+}
+
+.contenedor-form div{
+	margin-top: 20px;
+	/*cada división está separada 20px una de la otra*/
+}
+
+/****/
+@media screen and (max-width: 480px) {
+header {
+flex-direction: column;
+justify-content: center;
+}
+header .menu-contenedor {
+flex-direction: column;
+margin: 0;
+text-align: center;
+}
+header .menu-contenedor a {
+margin: 0 0 0 0;
+}
+ header .logo-contenedor {
+margin-left: 0;
+}
+
+ header img{
+display: none;
+}
+
+ .contenedor{
+margin-left: 0;
+}
+
+@media handheld
+body{width:98%;font-family:Verdana;font-size:16px;} 
+</style>
